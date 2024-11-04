@@ -40,6 +40,8 @@ jobs:
           private-key: ${{ secrets.RELEASER_APP_PRIVATE_KEY }}
       # install release dependencies and release
       - run: npm install --no-save @semantic-release/git semantic-release-plugin-github-breaking-version-tag
-      - run: npx semantic-release --no-ci --tag-format=v$VERSION
+      - run: |
+          VERSION=${{ github.event.inputs.version }}
+          npx semantic-release --no-ci --tag-format="v${VERSION}" --dry-run
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
