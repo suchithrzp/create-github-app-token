@@ -41,6 +41,7 @@ jobs:
       # install release dependencies and release
       - run: npm install --no-save @semantic-release/git
       - run: |
-          npx semantic-release --no-ci --tag-format="v${version}"
+          # npx semantic-release --no-ci --tag-format="v${version}"
+          npx semantic-release --no-ci --tag-format="v1.2"
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
