@@ -42,6 +42,6 @@ jobs:
       - run: npm install --no-save @semantic-release/git semantic-release-plugin-github-breaking-version-tag
       - run: |
           VERSION=${{ github.event.inputs.version }}
-          npx semantic-release --no-ci --tag-format="v${VERSION}" --dry-run
+          npx semantic-release --no-ci --tag-format="v${version}" --dry-run
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
