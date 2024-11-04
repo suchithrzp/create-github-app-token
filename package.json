@@ -44,7 +44,8 @@
         {
           "assets": [
             "package.json",
-            "dist/*"
+            "dist/*",
+            "lib/*"
           ],
           "message": "build(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
