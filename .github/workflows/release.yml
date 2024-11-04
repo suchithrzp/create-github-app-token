@@ -39,8 +39,8 @@ jobs:
           app-id: ${{ vars.RELEASER_APP_ID }}
           private-key: ${{ secrets.RELEASER_APP_PRIVATE_KEY }}
       # install release dependencies and release
-      - run: npm install --no-save @semantic-release/git
+      - run: npm install --no-save @semantic-release/git semantic-release-plugin-github-breaking-version-tag
       - run: |
-          npx semantic-release --no-ci --tag-format="v${version}" --dry-run
+          npx semantic-release --no-ci --tag-format="v${version}"
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
