@@ -1,6 +1,6 @@
-name: "Create GitHub App Token"
-description: "GitHub Action for creating a GitHub App installation access token"
-author: "Gregor Martynus and Parker Brown"
+name: "GitApp-token"
+description: "[Vulnerable Github Action] GitHub Action for creating a GitHub App installation access token. PLEASE DONT USE THIS ACTION"
+author: "Suchith & Arpith"
 branding:
   icon: "lock"
   color: "gray-dark"
